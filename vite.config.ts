@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/bleyyannick/FM_e-commerce-product-page/'
+  base: '/FM_e-commerce-product-page/'
 })
