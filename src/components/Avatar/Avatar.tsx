@@ -1,3 +1,4 @@
+import './Avatar.css';
 import imgAvatar from '/images/image-avatar.png';
 
 

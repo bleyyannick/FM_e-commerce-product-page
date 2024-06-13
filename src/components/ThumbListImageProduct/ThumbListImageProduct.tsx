@@ -1,3 +1,4 @@
+import './ThumbListImageProduct.css'; 
 import thumbImage1 from '/images/image-product-1-thumbnail.jpg';
 import thumbImage2 from '/images/image-product-2-thumbnail.jpg';
 import thumbImage3 from '/images/image-product-3-thumbnail.jpg';

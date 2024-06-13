@@ -1,5 +1,6 @@
 import { Navbar } from "./components/Navbar/Navbar"
 import { ProductContainer } from "./components/ProductContainer/ProductContainer"
+import { ProductDetailContainer } from "./components/ProductDetailContainer/ProductDetailContainer"
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
       <Navbar />
       <main>
          <ProductContainer />
-         
+         <ProductDetailContainer />       
       </main>
     </>
   )

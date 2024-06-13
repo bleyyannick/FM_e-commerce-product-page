@@ -1,3 +1,4 @@
+import './ProductContainer.css';
 import { ImageProduct } from "../ImageProduct/ImageProduct"
 import { ThumbListImageProduct } from "../ThumbListImageProduct/ThumbListImageProduct"
 

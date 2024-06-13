@@ -1,3 +1,4 @@
+import './Cart.css'
 import iconCart from '/images/icon-cart.svg';
 
 

@@ -1,3 +1,4 @@
+import './ImageProduct.css';
 import imgProduct from '/images/image-product-1.jpg';
 
 
