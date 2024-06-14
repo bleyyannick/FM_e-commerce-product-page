@@ -1,4 +1,5 @@
 import { AddCartProduct } from '../AddCartProduct/AddCartProduct';
+import { ManageProduct } from '../ManageProduct/ManageProduct';
 import './ProductDetailContainer.css';
 
 export const ProductDetailContainer = () => {
@@ -13,7 +14,10 @@ export const ProductDetailContainer = () => {
             <span>$125.00</span> <span>50%</span>
           </div>
           <p>$250.00</p>
-          <AddCartProduct />
+          <div className='handleProductContainer'>
+            <ManageProduct />
+            <AddCartProduct />
+          </div>
         </section>
     )
 }

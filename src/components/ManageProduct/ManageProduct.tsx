@@ -2,10 +2,10 @@ import './ManageProduct.css'
 
 export const ManageProduct = () => {
     return (
-        <>
-            <div> - </div>
-            <div> 0 </div>
-            <div> + </div>
-        </>
+        <div className='manageProduct'>
+            <button> - </button>
+            <span> 0 </span>
+            <button> + </button>
+        </div>
     )
 }
