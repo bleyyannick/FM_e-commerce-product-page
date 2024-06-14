@@ -8,10 +8,11 @@ import thumbImage4  from '/images/image-product-4-thumbnail.jpg';
 export const ThumbListImageProduct = () => {
     return (
         <ul className="thumb-list">
-            <img src={thumbImage1} alt="product" className="thumb" />
-            <img src={thumbImage2} alt="product" className="thumb" />
-            <img src={thumbImage3} alt="product" className="thumb" />
-            <img src={thumbImage4} alt="product" className="thumb" />
+            <li><img src={thumbImage1} alt="product" className="thumb" /></li>
+            <li><img src={thumbImage2} alt="product" className="thumb" /></li>
+            <li><img src={thumbImage3} alt="product" className="thumb" /></li>
+            <li><img src={thumbImage4} alt="product" className="thumb" /></li>
+           
         </ul>
     )
 }

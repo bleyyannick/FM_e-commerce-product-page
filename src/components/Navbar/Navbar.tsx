@@ -9,7 +9,7 @@ export const Navbar = () => {
     return (
         <nav>
             <LogoImg />
-            <ul>
+            <ul className="navbar-menu">
                 <li>Collections</li>
                 <li>Men</li>
                 <li>Women</li>

@@ -1,4 +1,5 @@
-import { Navbar } from "./components/Navbar/Navbar"
+import './App.css'
+import { Header } from "./components/Header/Header"
 import { ProductContainer } from "./components/ProductContainer/ProductContainer"
 import { ProductDetailContainer } from "./components/ProductDetailContainer/ProductDetailContainer"
 
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Header />
       <main>
          <ProductContainer />
          <ProductDetailContainer />       

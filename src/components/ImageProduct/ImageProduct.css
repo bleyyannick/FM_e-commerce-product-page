@@ -1,0 +1,9 @@
+.img-product {
+    width: 445px;
+    height: 445px;
+}
+.img-product img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
