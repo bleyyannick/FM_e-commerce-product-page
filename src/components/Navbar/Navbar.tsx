@@ -5,7 +5,11 @@ import { Cart } from "../Cart/Cart"
 import { LogoImg } from "../LogoImg/LogoImg"
 
 
-export const Navbar = () => {
+export const Navbar = ({ 
+    numberProduct 
+}: { 
+    numberProduct: number
+}) => {
     return (
         <nav>
             <LogoImg />
@@ -16,7 +20,7 @@ export const Navbar = () => {
                 <li>About</li>
                 <li>Contact</li>
             </ul>
-            <Cart />
+            <Cart numberProduct={numberProduct} />
             <Avatar />
         </nav>
     )

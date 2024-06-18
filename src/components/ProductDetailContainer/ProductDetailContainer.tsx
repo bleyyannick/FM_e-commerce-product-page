@@ -2,7 +2,15 @@ import { AddCartProduct } from '../AddCartProduct/AddCartProduct';
 import { ManageProduct } from '../ManageProduct/ManageProduct';
 import './ProductDetailContainer.css';
 
-export const ProductDetailContainer = () => {
+export const ProductDetailContainer = ({
+    onAddProduct,
+    onSubProduct, 
+    productNumber
+}: {
+    onAddProduct: () => void,
+    onSubProduct: () => void, 
+    productNumber: number
+}) => {
     return (
         <section>
           <p>Sneaker Company</p>  
@@ -15,7 +23,10 @@ export const ProductDetailContainer = () => {
           </div>
           <p>$250.00</p>
           <div className='handleProductContainer'>
-            <ManageProduct />
+            <ManageProduct  
+              onAddProduct={onAddProduct}  
+              onSubProduct={onSubProduct}
+              productNumber={productNumber}/>
             <AddCartProduct />
           </div>
         </section>

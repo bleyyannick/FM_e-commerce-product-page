@@ -1,23 +1,21 @@
-import { useState } from 'react'
+
 import './ManageProduct.css'
 
-export const ManageProduct = () => {
-    const [productNumber, setProductNumber] = useState<number>(0)
-
-    const substractProductNumber = () => {
-        if (productNumber > 0) {
-            setProductNumber(productNumber - 1)
-        } else {
-            setProductNumber(0)
-        }
-    }
-    const addProductNumber = () => setProductNumber(productNumber + 1)
+export const ManageProduct = ({
+    onAddProduct,
+    onSubProduct,
+    productNumber
+}: {
+    onAddProduct: () => void,
+    onSubProduct: () => void,
+    productNumber: number
+}) => {
     
     return (
         <div className='manageProduct'>
-            <button onClick={substractProductNumber}> - </button>
+            <button onClick={onSubProduct}> - </button>
             <span>{productNumber}</span>
-            <button onClick={addProductNumber}> + </button>
+            <button onClick={onAddProduct}> + </button>
         </div>
     )
 }
