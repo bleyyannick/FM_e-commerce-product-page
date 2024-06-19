@@ -5,11 +5,13 @@ import './ProductDetailContainer.css';
 export const ProductDetailContainer = ({
     onAddProduct,
     onSubProduct, 
-    productNumber
+    productNumber,
+    onHandleAddCart
 }: {
     onAddProduct: () => void,
     onSubProduct: () => void, 
-    productNumber: number
+    productNumber: number,
+    onHandleAddCart: () => void
 }) => {
     return (
         <section>
@@ -26,8 +28,9 @@ export const ProductDetailContainer = ({
             <ManageProduct  
               onAddProduct={onAddProduct}  
               onSubProduct={onSubProduct}
-              productNumber={productNumber}/>
-            <AddCartProduct />
+              productNumber={productNumber}
+              />
+            <AddCartProduct onHandleAddCart={onHandleAddCart} />
           </div>
         </section>
     )

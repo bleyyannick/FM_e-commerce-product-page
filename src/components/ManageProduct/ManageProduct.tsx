@@ -4,7 +4,7 @@ import './ManageProduct.css'
 export const ManageProduct = ({
     onAddProduct,
     onSubProduct,
-    productNumber
+    productNumber, 
 }: {
     onAddProduct: () => void,
     onSubProduct: () => void,

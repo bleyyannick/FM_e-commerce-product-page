@@ -6,9 +6,11 @@ import { LogoImg } from "../LogoImg/LogoImg"
 
 
 export const Navbar = ({ 
-    numberProduct 
+    numberProduct, 
+    cartEmpty
 }: { 
-    numberProduct: number
+    numberProduct: number, 
+    cartEmpty: boolean
 }) => {
     return (
         <nav>
@@ -20,7 +22,7 @@ export const Navbar = ({
                 <li>About</li>
                 <li>Contact</li>
             </ul>
-            <Cart numberProduct={numberProduct} />
+            <Cart cartEmpty={cartEmpty} numberProduct={numberProduct} />
             <Avatar />
         </nav>
     )
