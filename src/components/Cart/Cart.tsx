@@ -11,11 +11,10 @@ export const Cart = ({
     numberProduct: number,
     cartEmpty: boolean
 }) => {
-    
-    
+
     return (
         <div className="cart">
-            {!cartEmpty ? <span className="cart-number">{numberProduct}</span> : null}
+            {!cartEmpty && numberProduct > 0 ? <span className="cart-number">{numberProduct}</span> :null}
              <img src={iconCart} alt="cart" className="cart-img" />
         </div>
     )
