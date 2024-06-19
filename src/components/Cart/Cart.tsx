@@ -6,12 +6,19 @@ import iconCart from '/images/icon-cart.svg';
 export const Cart = ({
 
     numberProduct, 
-    cartEmpty
+    cartEmpty, 
+    sneakerPrice
 }: {
     numberProduct: number,
-    cartEmpty: boolean
+    cartEmpty: boolean,
+    sneakerPrice: number
 }) => {
+    const calculateTotal = (sneakerPrice: number, numberProduct: number) :number => {
+        return +(sneakerPrice * numberProduct).toFixed(2)
+    }
+    const total = calculateTotal(sneakerPrice, numberProduct)
 
+    console.log(total)
     return (
         <div className="cart">
             {!cartEmpty && numberProduct > 0 ? <span className="cart-number">{numberProduct}</span> :null}

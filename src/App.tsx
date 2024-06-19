@@ -7,6 +7,8 @@ import { ProductDetailContainer } from "./components/ProductDetailContainer/Prod
 function App() {
   const [productNumber, setProductNumber] = useState<number>(0)
   const [isCartEmpty, setIsCartEmpty] = useState<boolean>(true)
+
+  const SNEAKER_PRICE :number = 125;
  
 
   const substractProductNumber = (): void => {
@@ -25,10 +27,14 @@ function App() {
 
   return (
     <>
-      <Header stateCart={isCartEmpty}  totalProduct={productNumber} />
+      <Header 
+         sneakerPrice={SNEAKER_PRICE}
+         stateCart={isCartEmpty}  
+         totalProduct={productNumber} />
       <main>
          <ProductContainer />
          <ProductDetailContainer 
+          sneakerPrice={SNEAKER_PRICE}
           onAddProduct={addProductNumber} 
           onSubProduct={substractProductNumber}
           productNumber={productNumber}

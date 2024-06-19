@@ -6,12 +6,14 @@ export const ProductDetailContainer = ({
     onAddProduct,
     onSubProduct, 
     productNumber,
-    onHandleAddCart
+    onHandleAddCart,
+    sneakerPrice
 }: {
     onAddProduct: () => void,
     onSubProduct: () => void, 
     productNumber: number,
     onHandleAddCart: () => void
+    sneakerPrice: number
 }) => {
     return (
         <section>
@@ -21,7 +23,7 @@ export const ProductDetailContainer = ({
             These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
           </p>
           <div>
-            <span>$125.00</span> <span>50%</span>
+            <span>${sneakerPrice.toFixed(2)}</span> <span>50%</span>
           </div>
           <p>$250.00</p>
           <div className='handleProductContainer'>
