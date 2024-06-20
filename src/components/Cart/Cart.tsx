@@ -7,11 +7,13 @@ export const Cart = ({
 
     numberProduct, 
     cartEmpty, 
-    sneakerPrice
+    sneakerPrice,
+    onDisplayModal
 }: {
     numberProduct: number,
     cartEmpty: boolean,
-    sneakerPrice: number
+    sneakerPrice: number,
+    onDisplayModal: () => void
 }) => {
     const calculateTotal = (sneakerPrice: number, numberProduct: number) :number => {
         return +(sneakerPrice * numberProduct).toFixed(2)
@@ -20,7 +22,7 @@ export const Cart = ({
 
     console.log(total)
     return (
-        <div className="cart">
+        <div className="cart" onClick={onDisplayModal}>
             {!cartEmpty && numberProduct > 0 ? <span className="cart-number">{numberProduct}</span> :null}
              <img src={iconCart} alt="cart" className="cart-img" />
         </div>

@@ -23,8 +23,6 @@ function App() {
       productNumber > 0 ? setIsCartEmpty(false) : setIsCartEmpty(true)
  }
 
-
-
   return (
     <>
       <Header 
