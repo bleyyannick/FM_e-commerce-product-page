@@ -4,7 +4,6 @@ import iconCart from '/images/icon-cart.svg';
 
 
 export const Cart = ({
-
     numberProduct, 
     cartEmpty, 
     sneakerPrice,

@@ -9,7 +9,6 @@ function App() {
   const [isCartEmpty, setIsCartEmpty] = useState<boolean>(true)
 
   const SNEAKER_PRICE :number = 125;
- 
 
   const substractProductNumber = (): void => {
      if (productNumber > 0) {

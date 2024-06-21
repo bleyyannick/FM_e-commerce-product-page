@@ -34,7 +34,12 @@ export const Navbar = ({
                   sneakerPrice={sneakerPrice} 
                   cartEmpty={cartEmpty} 
                   numberProduct={numberProduct} />
-              {isDisplayModal && <ModalCart totalProductNumber={numberProduct} price={sneakerPrice}/>}
+              {isDisplayModal && 
+                <ModalCart 
+                totalProductNumber={numberProduct} 
+                price={sneakerPrice}
+                isNotAvailable={cartEmpty}/>
+                }
             <Avatar />
         </nav>
     )
