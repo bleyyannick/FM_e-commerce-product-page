@@ -30,8 +30,11 @@ export const Navbar = ({
                 <li>About</li>
                 <li>Contact</li>
             </ul>
-            <Cart onDisplayModal={handleDisplayModal}  sneakerPrice={sneakerPrice} cartEmpty={cartEmpty} numberProduct={numberProduct} />
-              {isDisplayModal && <ModalCart />}
+            <Cart onDisplayModal={handleDisplayModal}  
+                  sneakerPrice={sneakerPrice} 
+                  cartEmpty={cartEmpty} 
+                  numberProduct={numberProduct} />
+              {isDisplayModal && <ModalCart totalProductNumber={numberProduct} price={sneakerPrice}/>}
             <Avatar />
         </nav>
     )
