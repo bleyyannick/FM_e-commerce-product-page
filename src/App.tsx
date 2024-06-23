@@ -21,13 +21,18 @@ function App() {
  const handleAddCart = () :void => {
       productNumber > 0 ? setIsCartEmpty(false) : setIsCartEmpty(true)
  }
+ const handleDeleteCart = () :void => {
+      setIsCartEmpty(true)
+      setProductNumber(0)
+ }
 
   return (
     <>
       <Header 
          sneakerPrice={SNEAKER_PRICE}
          stateCart={isCartEmpty}  
-         totalProduct={productNumber} />
+         totalProduct={productNumber}
+         onDeleteCart={handleDeleteCart} />
       <main>
          <ProductContainer />
          <ProductDetailContainer 

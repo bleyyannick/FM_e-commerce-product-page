@@ -10,11 +10,13 @@ import { useState } from 'react'
 export const Navbar = ({ 
     numberProduct, 
     cartEmpty, 
-    sneakerPrice
+    sneakerPrice,
+    onDelete
 }: { 
     numberProduct: number, 
     cartEmpty: boolean, 
-    sneakerPrice: number
+    sneakerPrice: number,
+    onDelete: () => void
 }) => {
     const [isDisplayModal, setDisplayModal] = useState<boolean>(false); 
     const handleDisplayModal = () => {
@@ -38,7 +40,8 @@ export const Navbar = ({
                 <ModalCart 
                 totalProductNumber={numberProduct} 
                 price={sneakerPrice}
-                isNotAvailable={cartEmpty}/>
+                isNotAvailable={cartEmpty}
+                onDelete={onDelete}/>
                 }
             <Avatar />
         </nav>
