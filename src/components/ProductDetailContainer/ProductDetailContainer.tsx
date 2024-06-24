@@ -5,7 +5,6 @@ import './ProductDetailContainer.css';
 export const ProductDetailContainer = ({
     sneakerPrice
 }: {
-    onHandleAddCart: () => void
     sneakerPrice: number
 }) => {
     return (

@@ -25,7 +25,7 @@ export const Navbar = () => {
                 <li>Contact</li>
             </ul>
             <Cart onDisplayModal={handleDisplayModal}  
-                  sneakerPrice={sneakerPrice} 
+
                   cartEmpty={isCartEmpty}
                   numberProduct={productNumber}/>
               {isDisplayModal && 
