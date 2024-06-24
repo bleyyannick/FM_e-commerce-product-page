@@ -4,19 +4,19 @@ import './ModalCart.css'
 import { CartContext } from '../../store/cart-context';
 import { useContext } from 'react';
 
-export const ModalCart = ({price} : {
-    price: number
+export const ModalCart = ({productNumber, isCartEmpty} : {
+    productNumber: number,
+    isCartEmpty: boolean
 }) => {
+       const { deleteCart, sneakerPrice} = useContext(CartContext); 
+       const totalAmount: number = productNumber ? productNumber * sneakerPrice : 0;
 
-        const {isCartEmpty, deleteCart, productNumber} = useContext(CartContext)
-
-    const totalAmount: number = productNumber ? productNumber * price : 0;
     const contentCart = 
             <div>
                 <img className="modal-cart-img" src={miniImgProduct} alt="image product" />
                 <div>
                     <p>Fall Limited Edition Sneakers</p>
-                    <p>${price} x {productNumber}   {totalAmount}</p>
+                    <p>${sneakerPrice} x {productNumber}   {totalAmount}</p>
                 </div>
                 <img className="modal-cart-delete" src={iconDelete} onClick={deleteCart}  alt="delete icon image" />
                 <div>

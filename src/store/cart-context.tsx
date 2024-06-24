@@ -6,6 +6,8 @@ export type CartContextType = {
     substractProduct: () => void;
     addCart: () => void;
     deleteCart: () => void;
+    handleEnableCart: () => void,
+    isCartVisible: boolean;
     isCartEmpty: boolean;
     sneakerPrice: number;
 }
@@ -17,13 +19,18 @@ export const CartContext = createContext<CartContextType>({
     substractProduct: () => {},
     addCart: () => {} ,
     deleteCart: () => {},
+    handleEnableCart: () => {},
+    isCartVisible: true,
     isCartEmpty: true, 
     sneakerPrice: SNEAKER_PRICE
 });
 
 export const CartContextProvider = ({ children }: { children: ReactNode }) => {
     const [productNumber, setProductNumber] = useState<number>(0)
+    const [isCartVisible, setIsCartVisible] = useState<boolean>(false)
     const [isCartEmpty, setIsCartEmpty] = useState<boolean>(true)
+
+    const handleEnableCart = () => setIsCartVisible(!isCartVisible)
    
     const substractProduct = (): void => {
         if (productNumber > 0) {
@@ -37,7 +44,7 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
          productNumber > 0 ? setIsCartEmpty(false) : setIsCartEmpty(true)
     }
     const deleteCart = () :void => {
-         setIsCartEmpty(true)
+         setIsCartVisible(true)
          setProductNumber(0)
     }
 
@@ -48,6 +55,8 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
         addCart,
         deleteCart,
         isCartEmpty,
+        isCartVisible,
+        handleEnableCart,
         sneakerPrice: SNEAKER_PRICE
     }
 
