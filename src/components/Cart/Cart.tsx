@@ -4,15 +4,15 @@ import iconCart from '/images/icon-cart.svg';
 
 
 export const Cart = ({
-    numberProduct, 
     cartEmpty, 
     sneakerPrice,
-    onDisplayModal
+    onDisplayModal, 
+    numberProduct
 }: {
-    numberProduct: number,
     cartEmpty: boolean,
     sneakerPrice: number,
-    onDisplayModal: () => void
+    onDisplayModal: () => void,
+    numberProduct: number
 }) => {
     const calculateTotal = (sneakerPrice: number, numberProduct: number) :number => {
         return +(sneakerPrice * numberProduct).toFixed(2)

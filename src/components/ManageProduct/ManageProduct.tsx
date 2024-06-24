@@ -1,21 +1,15 @@
 
+import { useContext } from 'react'
 import './ManageProduct.css'
+import { CartContext, CartContextType } from '../../store/cart-context'
 
-export const ManageProduct = ({
-    onAddProduct,
-    onSubProduct,
-    productNumber, 
-}: {
-    onAddProduct: () => void,
-    onSubProduct: () => void,
-    productNumber: number
-}) => {
-    
+export const ManageProduct = () => {
+      const { addProduct, substractProduct, productNumber}  =  useContext<CartContextType>(CartContext)
     return (
         <div className='manageProduct'>
-            <button onClick={onSubProduct}> - </button>
+            <button onClick={substractProduct}> - </button>
             <span>{productNumber}</span>
-            <button onClick={onAddProduct}> + </button>
+            <button onClick={addProduct}> + </button>
         </div>
     )
 }

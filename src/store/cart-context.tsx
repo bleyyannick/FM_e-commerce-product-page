@@ -1,13 +1,13 @@
 import { createContext, useState, ReactNode } from "react";
 
-type CartContextType = {
+export type CartContextType = {
     productNumber: number;
     addProduct: () => void;
     substractProduct: () => void;
     addCart: () => void;
     deleteCart: () => void;
     isCartEmpty: boolean;
-    sneakerPrice?: number;
+    sneakerPrice: number;
 }
 
 const SNEAKER_PRICE :number = 125;
@@ -41,15 +41,18 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
          setProductNumber(0)
     }
 
+    const cartCtxValue :CartContextType = {
+        productNumber,
+        addProduct,
+        substractProduct,
+        addCart,
+        deleteCart,
+        isCartEmpty,
+        sneakerPrice: SNEAKER_PRICE
+    }
+
     return (
-        <CartContext.Provider value={{
-            productNumber: 0,
-            addProduct: addProduct,
-            substractProduct: substractProduct,
-            addCart,
-            deleteCart, 
-            isCartEmpty,
-        }}>
+        <CartContext.Provider value={cartCtxValue}>
             {children}
         </CartContext.Provider>
     )

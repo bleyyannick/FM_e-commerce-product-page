@@ -4,24 +4,16 @@ import { Avatar } from "../Avatar/Avatar"
 import { Cart } from "../Cart/Cart"
 import { LogoImg } from "../LogoImg/LogoImg"
 import { ModalCart } from '../ModalCart/ModalCart'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { CartContext, CartContextType } from '../../store/cart-context'
 
 
-export const Navbar = ({ 
-    numberProduct, 
-    cartEmpty, 
-    sneakerPrice,
-    onDelete
-}: { 
-    numberProduct: number, 
-    cartEmpty: boolean, 
-    sneakerPrice: number,
-    onDelete: () => void
-}) => {
+export const Navbar = () => {
     const [isDisplayModal, setDisplayModal] = useState<boolean>(false); 
     const handleDisplayModal = () => {
         setDisplayModal(!isDisplayModal)
     }
+    const  {isCartEmpty, productNumber, sneakerPrice} = useContext<CartContextType>(CartContext);
     return (
         <nav>
             <LogoImg />
@@ -34,14 +26,10 @@ export const Navbar = ({
             </ul>
             <Cart onDisplayModal={handleDisplayModal}  
                   sneakerPrice={sneakerPrice} 
-                  cartEmpty={cartEmpty} 
-                  numberProduct={numberProduct} />
+                  cartEmpty={isCartEmpty}
+                  numberProduct={productNumber}/>
               {isDisplayModal && 
-                <ModalCart 
-                totalProductNumber={numberProduct} 
-                price={sneakerPrice}
-                isNotAvailable={cartEmpty}
-                onDelete={onDelete}/>
+                <ModalCart price={sneakerPrice}/>
                 }
             <Avatar />
         </nav>
