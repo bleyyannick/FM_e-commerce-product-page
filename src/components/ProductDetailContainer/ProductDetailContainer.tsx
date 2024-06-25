@@ -2,11 +2,7 @@ import { AddCartProduct } from '../AddCartProduct/AddCartProduct';
 import { ManageProduct } from '../ManageProduct/ManageProduct';
 import './ProductDetailContainer.css';
 
-export const ProductDetailContainer = ({
-    sneakerPrice
-}: {
-    sneakerPrice: number
-}) => {
+export const ProductDetailContainer = ({ sneakerPrice }:{ sneakerPrice: number }) => {
     return (
         <section>
           <p>Sneaker Company</p>  
@@ -15,7 +11,7 @@ export const ProductDetailContainer = ({
             These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
           </p>
           <div>
-            <span>${sneakerPrice.toFixed(2)}</span> <span>50%</span>
+            <span>${sneakerPrice.toFixed(2)}</span><span>50%</span>
           </div>
           <p>$250.00</p>
           <div className='handleProductContainer'>

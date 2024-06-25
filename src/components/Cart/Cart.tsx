@@ -15,7 +15,7 @@ export const Cart = ({
     const { handleEnableCart } = useContext<CartContextType>(CartContext);
     return (
         <div className="cart" onClick={handleEnableCart}>
-            {(!cartEmpty && numberProduct > 0) && <span className="cart-number">{numberProduct}</span> }
+            {(!cartEmpty && numberProduct > 0) && <span className="cart-number">{numberProduct}</span>}
              <img src={iconCart} alt="cart" className="cart-img" />
         </div>
     )

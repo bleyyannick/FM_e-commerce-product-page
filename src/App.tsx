@@ -12,8 +12,7 @@ function App() {
       <Header />
       <main>
          <ProductContainer />
-         <ProductDetailContainer
-         sneakerPrice={SNEAKER_PRICE} />       
+         <ProductDetailContainer sneakerPrice={SNEAKER_PRICE} />       
       </main>
     </>
   )

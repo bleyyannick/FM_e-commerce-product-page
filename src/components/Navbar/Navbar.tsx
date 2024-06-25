@@ -1,5 +1,4 @@
 import './Navbar.css'
-
 import { Avatar } from "../Avatar/Avatar"
 import { Cart } from "../Cart/Cart"
 import { LogoImg } from "../LogoImg/LogoImg"
