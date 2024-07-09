@@ -5,12 +5,17 @@ import { LogoImg } from "../LogoImg/LogoImg"
 import { ModalCart } from '../ModalCart/ModalCart'
 import { useContext} from 'react'
 import { CartContext, CartContextType } from '../../store/cart-context'
+import  burgerMenuImg  from '/images/icon-menu.svg';
+
 
 
 export const Navbar = () => {
     const  { isCartEmpty, isCartVisible , productNumber } = useContext<CartContextType>(CartContext);
     return (
         <nav>
+            <div className="navbar-burger">
+                <img src={burgerMenuImg} alt="menu burger for navigation" />
+            </div>
             <LogoImg />
             <ul className="navbar-menu">
                 <li>Collections</li>
