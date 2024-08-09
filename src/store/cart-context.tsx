@@ -47,7 +47,7 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
     }
     const deleteCart = () :void => {
          setIsCartVisible(true)
-         setProductNumber(0)
+         setTemporaryOrder(0)
     }
 
     const cartCtxValue :CartContextType = {
