@@ -7,15 +7,15 @@ import iconCart from '/images/icon-cart.svg';
 
 export const Cart = ({
     cartEmpty, 
-    numberProduct
+    temporaryOrder
 }: {
     cartEmpty: boolean,
-    numberProduct: number
+    temporaryOrder: number
 }) => {
     const { handleEnableCart } = useContext<CartContextType>(CartContext);
     return (
         <div className="cart" onClick={handleEnableCart}>
-            {(!cartEmpty && numberProduct > 0) && <span className="cart-number">{numberProduct}</span>}
+            {(!cartEmpty && temporaryOrder > 0) && <span className="cart-number">{temporaryOrder}</span>}
              <img src={iconCart} alt="cart" className="cart-img" />
         </div>
     )

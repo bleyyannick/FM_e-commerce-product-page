@@ -10,7 +10,7 @@ import  burgerMenuImg  from '/images/icon-menu.svg';
 
 
 export const Navbar = () => {
-    const  { isCartEmpty, isCartVisible , productNumber } = useContext<CartContextType>(CartContext);
+    const  { isCartEmpty, isCartVisible , temporaryOrder } = useContext<CartContextType>(CartContext);
     return (
         <nav>
             <div className="navbar-burger">
@@ -24,8 +24,8 @@ export const Navbar = () => {
                 <li>About</li>
                 <li>Contact</li>
             </ul>
-            <Cart cartEmpty={isCartEmpty} numberProduct={productNumber}/>
-              {isCartVisible && <ModalCart isCartEmpty={isCartEmpty} productNumber={productNumber}/>}
+            <Cart cartEmpty={isCartEmpty} temporaryOrder={temporaryOrder}/>
+              {isCartVisible && <ModalCart isCartEmpty={isCartEmpty} temporaryOrder={temporaryOrder}/>}
             <Avatar />
         </nav>
     )
